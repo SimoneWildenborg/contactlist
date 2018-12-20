@@ -4,6 +4,8 @@
 <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        /* tekstkleur laten veranderen, aanpassen naar switch*/
+        /* omgezet naar switch
         var currentColor = "red";
 
         function wissel(){
@@ -18,24 +20,66 @@
                     $('#mytext', svgDoc).css('fill','green');
                     currentColor = "green";
                 }
+            else if (currentColor=="green")
+                {
+                    $('#mytext', svgDoc).css('fill','yellow');
+                    currentColor = "yellow";
+                }   
+
             else 
                 {
                     $('#mytext', svgDoc).css('fill','red');
                     currentColor = "red"; 
                 } 
-            console.log("ja");
             setTimeout(wissel,1000);
-
             };
+*/          
+            var currentColor = "red"
+            function wissel(){
+            var svgDoc = $('#mysvg')[0].contentDocument;
+                switch (currentColor){
+                    case "red": 
+                        $('#mytext', svgDoc).css('fill','blue');
+                        currentColor = "blue" ;
+                        break;
+                    case "blue": 
+                        $('#mytext', svgDoc).css('fill','green');
+                        currentColor="green";
+                        break;
+                    case "green": 
+                        $('#mytext', svgDoc).css('fill','yellow');
+                        currentColor = "yellow";
+                        break;
+                    case "yellow": 
+                        $('#mytext', svgDoc).css('fill','red');
+                        currentColor = "red";
+                        break;
+                        };
+                        
+                    setTimeout(wissel,1000);
+                    };
+
+
+
+
+
+
+        
+
     </script>
     
 
 </head>
 
 <body onload="wissel();"> 
-    <svg id="mysvg" height="30" width="500">
+    <svg id="mysvg" height="500" width="600">
         <text id="mytext" x="0" y="15" fill="red">Hello Simone- You 
-        can modify SVG attributes with JavaScript!</text>
+            can modify SVG attributes with JavaScript!</text>
+        <ellipse class="snow" cx="30" cy="30" 
+            fill="black" id="svg_169" rx="10" ry="10" 
+            stroke="#ffffff" stroke-dasharray="null" 
+            stroke-linecap="null" stroke-linejoin="null" 
+            stroke-width="5"/>
     </svg>
    
 <style>
