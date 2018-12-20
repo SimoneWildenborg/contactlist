@@ -4,36 +4,7 @@
 <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        /* tekstkleur laten veranderen, aanpassen naar switch*/
-        /* omgezet naar switch
-        var currentColor = "red";
-
-        function wissel(){
-            var svgDoc = $('#mysvg')[0].contentDocument;
-            if (currentColor=="red")
-                {
-                    $('#mytext', svgDoc).css('fill','blue');
-                    currentColor = "blue";
-                }
-            else if (currentColor=="blue")
-                {
-                    $('#mytext', svgDoc).css('fill','green');
-                    currentColor = "green";
-                }
-            else if (currentColor=="green")
-                {
-                    $('#mytext', svgDoc).css('fill','yellow');
-                    currentColor = "yellow";
-                }   
-
-            else 
-                {
-                    $('#mytext', svgDoc).css('fill','red');
-                    currentColor = "red"; 
-                } 
-            setTimeout(wissel,1000);
-            };
-*/          
+        
             var currentColor = "red"
             function wissel(){
             var svgDoc = $('#mysvg')[0].contentDocument;
@@ -59,16 +30,7 @@
                     setTimeout(wissel,1000);
                     };
 
-
-
-
-
-
-        
-
     </script>
-    
-
 </head>
 
 <body onload="wissel();"> 
@@ -89,15 +51,3 @@
 </style>
 </body>
 </html>
-<!--
-<script>
-        
-
-</head>
-
-<body onload="wissel();"> 
-    <svg id="mysvg" height="30" width="500">
-        <text id="mytext" x="0" y="15" fill="red">Hello Simone- You 
-        can modify SVG attributes with JavaScript!</text>
-    </svg>
--->
