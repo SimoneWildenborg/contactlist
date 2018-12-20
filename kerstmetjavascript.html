@@ -1,0 +1,59 @@
+<!doctype HTML>
+
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var currentColor = "red";
+
+        function wissel(){
+            var svgDoc = $('#mysvg')[0].contentDocument;
+            if (currentColor=="red")
+                {
+                    $('#mytext', svgDoc).css('fill','blue');
+                    currentColor = "blue";
+                }
+            else if (currentColor=="blue")
+                {
+                    $('#mytext', svgDoc).css('fill','green');
+                    currentColor = "green";
+                }
+            else 
+                {
+                    $('#mytext', svgDoc).css('fill','red');
+                    currentColor = "red"; 
+                } 
+            console.log("ja");
+            setTimeout(wissel,1000);
+
+            };
+    </script>
+    
+
+</head>
+
+<body onload="wissel();"> 
+    <svg id="mysvg" height="30" width="500">
+        <text id="mytext" x="0" y="15" fill="red">Hello Simone- You 
+        can modify SVG attributes with JavaScript!</text>
+    </svg>
+   
+<style>
+    #mytext{
+        fill: red;
+    }
+</style>
+</body>
+</html>
+<!--
+<script>
+        
+
+</head>
+
+<body onload="wissel();"> 
+    <svg id="mysvg" height="30" width="500">
+        <text id="mytext" x="0" y="15" fill="red">Hello Simone- You 
+        can modify SVG attributes with JavaScript!</text>
+    </svg>
+-->
